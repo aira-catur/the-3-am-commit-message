@@ -6,9 +6,9 @@ TEXT = TEXT_HEAD + TEXT_TAIL
 
 
 def main():
-    output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
-    os.makedirs(output_dir, exist_ok=True)
-    with open(os.path.join(output_dir, "entry.txt"), "w", encoding="utf-8") as f:
+    dest_dir = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
+    os.makedirs(dest_dir, exist_ok=True)
+    with open(os.path.join(dest_dir, "entry.txt"), "w", encoding="utf-8") as f:
         f.write(TEXT)
 
 
